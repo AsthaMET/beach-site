@@ -214,11 +214,20 @@
   .z-50 {
     z-index: 50;
   }
+  .mx-2\.5 {
+    margin-inline: calc(var(--spacing) * 2.5);
+  }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-\[26px\] {
+    margin-top: 26px;
+  }
   .mt-\[30px\] {
     margin-top: 30px;
+  }
+  .mt-\[120px\] {
+    margin-top: 120px;
   }
   .block {
     display: block;
@@ -294,6 +303,18 @@
   .bg-\[url\(\'\.\/assets\/images\/aboutus-bg\.jpg\'\)\] {
     background-image: url('./assets/images/aboutus-bg.jpg');
   }
+  .bg-\[url\(\'\.\/assets\/images\/aboutus\.png\'\)\] {
+    background-image: url('./assets/images/aboutus.png');
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-bottom {
+    background-position: bottom;
+  }
+  .p-7 {
+    padding: calc(var(--spacing) * 7);
+  }
   .px-\[25px\] {
     padding-inline: 25px;
   }
@@ -302,6 +323,9 @@
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
+  }
+  .pt-\[394px\] {
+    padding-top: 394px;
   }
   .text-center {
     text-align: center;
@@ -500,6 +524,11 @@
       font-size: 48px;
     }
   }
+  h4,.h4 {
+    font-size: 24px;
+    --tw-leading: 34px;
+    line-height: 34px;
+  }
   img {
     height: 100%;
     width: 100%;
@@ -680,6 +709,13 @@
   background: linear-gradient( 281.12deg, rgba(0, 0, 0, 0) 29.65%, rgba(0, 0, 0, 0.457305) 51.49%, rgba(0, 0, 0, 0.605919) 71.24%, rgba(0, 0, 0, 0.75) 95.86% );
 }
 .about-beachside-rehab-main-gradiant {
+  box-shadow: 0px 4px 20px 0px #00000033;
+}
+.our-facilities-blur {
+  background: #FFFFFFE0;
+  backdrop-filter: blur(10px);
+}
+.our-facilities-shadow {
   box-shadow: 0px 4px 20px 0px #00000033;
 }
 @property --tw-translate-x {
