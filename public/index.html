@@ -1,17 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Career Compass</title>
-    <link href="./styles.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="custom-div">
-      <h1 class="text-2xl font-bold text-blue-700">Hello World!</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeachSite</title>
+  <link href="./styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="announcement-bar">
+    <div class="static container-sm2">
+      <div class="px-[25px] py-5 lg-pro:flex text-center items-center lg-pro:justify-between">
+        <span class="font-bold">This is the first example of a sitewide notice.</span>
+        <div class="gap-5 2xs:hidden lg-pro:flex">
+          <div class="flex gap-2.5 font-bold h-fit leading text-dark-gray tracking-[0.001em] self-center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_7_14)">
+                <path
+                  d="M19.5516 15.8059L16.4629 12.7168C15.8477 12.1041 14.8289 12.1227 14.1923 12.7596L12.6362 14.3153C12.5379 14.2612 12.4361 14.2046 12.3291 14.1445C11.3465 13.6 10.0015 12.8538 8.58628 11.4375C7.16683 10.0182 6.41986 8.67118 5.87372 7.68789C5.81609 7.58372 5.76087 7.48329 5.70634 7.3879L6.75071 6.34509L7.26416 5.83101C7.90178 5.19322 7.91936 4.17471 7.30559 3.56019L4.2169 0.470814C3.60313 -0.142844 2.58387 -0.124227 1.94626 0.513563L1.07576 1.38906L1.09955 1.41267C0.807657 1.78512 0.563746 2.21468 0.382234 2.67791C0.214915 3.11885 0.110743 3.53962 0.0631095 3.96125C-0.344731 7.34234 1.20033 10.4324 5.39342 14.6256C11.1896 20.4213 15.8605 19.9834 16.062 19.9621C16.5009 19.9096 16.9214 19.8048 17.3489 19.6388C17.8081 19.4594 18.2374 19.2158 18.6096 18.9245L18.6286 18.9414L19.5105 18.0779C20.1468 17.4402 20.1651 16.4214 19.5516 15.8059Z"
+                  fill="#3E698C" />
+              </g>
+              <defs>
+                <clipPath id="clip0_7_14">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <a href="#">866.349.1770</a>
+          </div>
+          <div class="btn">
+            <a href="#">Contact</a>
+          </div>
+          <div class="btn">
+            <a href="#">Verify Insurance</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <nav class="fixed container-sm1 flex nav-main header-shedow">
+      <a href="#"><img src="./assets/images/logo.png"></a>
+      <div class="links gap-11 hidden lg-pro:flex">
+        <a href="#">Mental Health</a>
+        <a href="#">Substance Abuse & Therapy</a>
+        <a href="#">About Beachside Rehab</a>
+      </div>
+      <div>
+        <a href="#"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_7_41)">
+              <path
+                d="M19.2895 15.7606L15.9977 12.4688C16.5962 11.2718 16.9952 9.87531 16.9952 8.4788C16.9952 3.79052 13.2047 0 8.5164 0C3.82812 0 0.0375977 3.79052 0.0375977 8.4788C0.0375977 13.1671 3.82812 16.9576 8.5164 16.9576C9.91291 16.9576 11.3094 16.5586 12.5064 15.9601L15.7982 19.2519C16.7957 20.2494 18.292 20.2494 19.2895 19.2519C20.1872 18.2544 20.1872 16.7581 19.2895 15.7606ZM8.5164 14.9626C4.92538 14.9626 2.03261 12.0698 2.03261 8.4788C2.03261 4.88778 4.92538 1.99501 8.5164 1.99501C12.1074 1.99501 15.0002 4.88778 15.0002 8.4788C15.0002 12.0698 12.1074 14.9626 8.5164 14.9626Z"
+                fill="#3E698C" />
+            </g>
+            <defs>
+              <clipPath id="clip0_7_41">
+                <rect width="20" height="20" fill="white" />
+              </clipPath>
+            </defs>
+          </svg></a>
+      </div>
+
+      <button id="menuButton" class="lg-pro:hidden">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path stroke="#3E698C" stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+
+        <svg id="closeIcon" class="hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path stroke="#3E698C" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M6 18L18 6" />
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu"
+      class="fixed top-[196px] left-0 h-fit w-full -translate-x-full transition-transform duration-500 z-40 blue-green-bg">
+      <ul class="flex flex-col gap-5 items-center text-[20px] py-10">
+        <li><a href="#">Mental Health</a></li>
+        <li><a href="#">Substance Abuse & Therapy</a></li>
+        <li><a href="#">About Beachside Rehab</a></li>
+
+        <div class="announcement-btn h-auto w-[90%] flex flex-col gap-5">
+          <div
+            class="flex gap-2.5 font-bold h-fit leading text-dark-gray tracking-[0.001em] self-center justify-self-center">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_7_14)">
+                <path
+                  d="M19.5516 15.8059L16.4629 12.7168C15.8477 12.1041 14.8289 12.1227 14.1923 12.7596L12.6362 14.3153C12.5379 14.2612 12.4361 14.2046 12.3291 14.1445C11.3465 13.6 10.0015 12.8538 8.58628 11.4375C7.16683 10.0182 6.41986 8.67118 5.87372 7.68789C5.81609 7.58372 5.76087 7.48329 5.70634 7.3879L6.75071 6.34509L7.26416 5.83101C7.90178 5.19322 7.91936 4.17471 7.30559 3.56019L4.2169 0.470814C3.60313 -0.142844 2.58387 -0.124227 1.94626 0.513563L1.07576 1.38906L1.09955 1.41267C0.807657 1.78512 0.563746 2.21468 0.382234 2.67791C0.214915 3.11885 0.110743 3.53962 0.0631095 3.96125C-0.344731 7.34234 1.20033 10.4324 5.39342 14.6256C11.1896 20.4213 15.8605 19.9834 16.062 19.9621C16.5009 19.9096 16.9214 19.8048 17.3489 19.6388C17.8081 19.4594 18.2374 19.2158 18.6096 18.9245L18.6286 18.9414L19.5105 18.0779C20.1468 17.4402 20.1651 16.4214 19.5516 15.8059Z"
+                  fill="#3E698C" />
+              </g>
+              <defs>
+                <clipPath id="clip0_7_14">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <a href="#">866.349.1770</a>
+          </div>
+          <div class="btn">
+            <a href="#">Contact</a>
+          </div>
+          <div class="btn">
+            <a href="#">Verify Insurance</a>
+          </div>
+        </div>
+      </ul>
     </div>
 
-    <!-- Scripts -->
-    <script src="./assets/js/main.js"></script>
-  </body>
+  </header>
+
+  <!-- Hero section -->
+  <div class="hero-section">
+    <div class="h-[484px] w-full -z-10 relative">
+      <div class="h-[484px] absolute inset-0 hero-gradiant z-50 w-full"></div>
+      <div>
+        <img src="./assets/images/aboutus.png" alt="hero img 1" class="h-[484px] absolute" />
+      </div>
+      <div class="hero-heading top-1/2 z-50 relative w-fit">
+        <h1>About Us</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Welcome To Beachside Rehab -->
+  <section class="welcome-to-beachside-rehab">
+    <!--  -->
+    <div class="bg-[url('./assets/images/aboutus-bg.jpg')] 2xs:pt-[30px] 2xs:pb-[350px] lg:pt-[100px] lg:pb-[400px]">
+      <div class="container-1000 justify-self-center justify-items-center">
+        <h2>Welcome To Beachside Rehab</h2>
+        <p class="text-center mt-5">Located in South Florida, Beachside Rehab is a private program that provides mental
+          health and addictions
+          treatment services. Regardless of what you have gone through in the past or the goals you have set for
+          yourself
+          in the future, we are here to show you the way.</p>
+        <div class="btn w-fit mt-[30px]">
+          <a href="#">Call 886-349-1770</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="about-beachside-rehab">
+    
+      <div
+        class="grid 2xs:grid-cols-1 lg:grid-cols-2 gap-[100px] about-beachside-rehab-main about-beachside-rehab-main-gradiant">
+        <div>
+          <img src="./assets/images/about-b-r.png" alt="about" class="rounded-tl-[40px] rounded-bl-[140px]">
+        </div>
+        <div class="2xs:pt-0 2xs:pb-8 lg:py-8 self-center 2xs:mx-6 xl:mr-[100px] lg:ml-0">
+          <h2>About Beachside Rehab</h2>
+          <p class="mt-5 2xs:text-[14px] sm:text-base">With a holistic approach towards substance abuse and treatment, combined with a conventional
+            12-step
+            program,
+            every person who visits Beachside Rehab is in position to reclaim their life. It is this unique approach
+            that
+            has allowed us to help many people in your position take back their life.
+            <span class="block mt-5">We utilize mind, body, and spiritual
+              elements throughout treatment to enhance the recovery process and fight against the possibility of
+              relapse.
+              We
+              understand that every person is faced with a unique set of circumstances. This is why Beachside Rehab
+              provides
+              specialized treatment for every person who walks through our doors.</span>
+          </p>
+          <div class="btn w-fit mt-[30px] 2xs:justify-self-center lg:justify-self-start">
+            <a href="#">Verify My Insurance</a>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>

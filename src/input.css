@@ -1,5 +1,132 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-.custom-div {
-  @apply w-full h-full bg-blue-300;
+@theme {
+  --breakpoint-2xs: 320px;
+  --breakpoint-lg-pro: 1100px;
+  --breakpoint-xxl: 1400px;
+
+  --heading-1: 80px;
+  --heading-2: 48px;
+  --heading-3: 32px;
+  --heading-4: 24px;
+  --heading-5: 20px;
+  --heading-6: 16px;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-blue-green: #c9e1e3;
+  --color-orange: #ed9b69;
+  --color-blue: #3e698c;
+  --color-dark-blue: #183045;
+  --color-dark-gray: #212121;
+  --color-brown: #582e09;
+  --color-light-blue: #e0f1ff;
+
+  --font-poppins: "Poppins", sans-serif;
+  --font-alice: "Alice", serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  ::after,
+  ::before,
+  * {
+    @apply box-border;
+  }
+  body {
+    @apply m-0 p-0 font-poppins text-base;
+  }
+  h1,
+  .h1 {
+    @apply text-[80px] 2xs:text-5xl md:text-6xl lg:text-[80px] font-alice text-white leading-[91px] tracking-[0.001em];
+  }
+  h2,
+  .h2 {
+    @apply text-[48px] 2xs:text-[26px] sm:text-[30px] md:text-[35px] lg:text-[48px] font-alice font-normal text-dark-blue 2xs:text-center lg:text-left leading-[55px] 2xs:leading-10 md:leading-[55px];
+  }
+  img {
+    @apply w-full h-full object-cover;
+  }
+  .leading {
+    @apply leading-[26px];
+  }
+  p {
+    @apply text-dark-gray leading-[26px] font-poppins;
+  }
+}
+
+@layer components {
+  .container-sm1 {
+    @apply mx-5;
+  }
+  .container-sm2 {
+    @apply px-5;
+  }
+  .btn {
+    @apply bg-orange hover:bg-blue cursor-pointer text-center rounded-[23px] px-7 py-2.5 font-poppins font-bold leading-[26px] text-dark-gray tracking-[0.003em] transition-all duration-500 ease-in-out;
+  }
+  .container-1000 {
+    @apply max-w-[1000px] 2xs:mx-5 lg:mx-0;
+  }
+}
+
+@layer utilities {
+  .links,
+  #mobileMenu a {
+    @apply text-dark-gray font-bold leading-[26px];
+  }
+  .links a {
+    @apply hover:text-orange transition-all duration-400 ease-in-out;
+  }
+  nav button svg {
+    @apply w-8 h-8 text-blue cursor-pointer;
+  }
+  nav img {
+    @apply 2xs:max-w-[150px] lg:max-w-[263px] cursor-pointer;
+  }
+  .nav-main {
+    @apply items-center justify-between rounded-lg bg-white w-[-webkit-fill-available] 
+    py-5 pl-[34px] pr-[45px] 2xs:pl-5 2xs:pr-5 sm:pl-6 sm:pr-6 lg-pro:pl-[34px] lg-pro:pr-[45px];
+  }
+  .hero-heading {
+    @apply 2xs:left-[50px] md:left-20 lg:left-[100px];
+  }
+  .blue-green-bg,
+  .announcement-bar:first-child {
+    @apply bg-blue-green;
+  }
+  .about-beachside-rehab-main {
+    @apply 2xs:gap-[30px] xl:gap-[100px] -mt-[300px] mx-20 2xs:mx-3.5 lg:mx-20 bg-blue-green rounded-tl-[40px] rounded-bl-[140px] rounded-tr-[140px] rounded-br-[40px];
+  }
+}
+
+.active_nav {
+  /* bg-black max-w-full transition top-0 flex justify-between fixed w-full z-50  items-center py-5; */
+  background-color: white !important;
+  transition: 0.3s ease;
+  top: 0;
+}
+.transition {
+  transition: all;
+  transition-duration: 500;
+  transition-timing-function: ease-in-out;
+}
+.header-shedow {
+  box-shadow: 0px 4px 20px 0px #00000033;
+  backdrop-filter: blur(10px);
+}
+.hero-gradiant {
+  background: linear-gradient(
+    281.12deg,
+    rgba(0, 0, 0, 0) 29.65%,
+    rgba(0, 0, 0, 0.457305) 51.49%,
+    rgba(0, 0, 0, 0.605919) 71.24%,
+    rgba(0, 0, 0, 0.75) 95.86%
+  );
+}
+.about-beachside-rehab-main-gradiant {
+  box-shadow: 0px 4px 20px 0px #00000033;
 }
