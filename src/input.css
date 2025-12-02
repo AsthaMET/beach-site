@@ -6,13 +6,6 @@
   --breakpoint-lg-pro: 1100px;
   --breakpoint-xxl: 1400px;
 
-  --heading-1: 80px;
-  --heading-2: 48px;
-  --heading-3: 32px;
-  --heading-4: 24px;
-  --heading-5: 20px;
-  --heading-6: 16px;
-
   --color-white: #ffffff;
   --color-black: #000000;
   --color-blue-green: #c9e1e3;
@@ -23,87 +16,130 @@
   --color-brown: #582e09;
   --color-light-blue: #e0f1ff;
 
-  --font-poppins: "Poppins", sans-serif;
-  --font-alice: "Alice", serif;
+  --font-body: "Poppins", sans-serif;
+  --font-heading: "Alice", serif;
 }
 
 @layer base {
   html {
     @apply scroll-smooth;
   }
+
   ::after,
   ::before,
   * {
     @apply box-border;
   }
+
   body {
-    @apply m-0 p-0 font-poppins text-base;
+    @apply m-0 p-0 font-body text-base;
   }
+
   h1,
   .h1 {
-    @apply text-[80px] 2xs:text-5xl md:text-6xl lg:text-[80px] font-alice text-white leading-[91px] tracking-[0.001em];
+    @apply text-[80px] 2xs:text-5xl md:text-6xl lg:text-[80px] font-heading text-white leading-[91px] tracking-[0.001em];
   }
+
   h2,
   .h2 {
-    @apply text-[48px] 2xs:text-[26px] sm:text-[30px] md:text-[35px] lg:text-[48px] font-alice font-normal text-dark-blue 2xs:text-center lg:text-left leading-[55px] 2xs:leading-10 md:leading-[55px];
+    @apply text-[48px] 2xs:text-[26px] sm:text-[30px] md:text-[35px] lg:text-[48px] font-heading font-normal text-dark-blue 2xs:text-center lg:text-left leading-[55px] 2xs:leading-10 md:leading-[55px];
   }
-  h4,.h4{
-    @apply text-[24px] leading-[34px];
+
+  h4,
+  .h4 {
+    @apply 2xs:text-[18px] sm:text-[20px] md:text-[24px] leading-[34px] font-body font-bold;
   }
+
+  h5,
+  .h5 {
+    @apply text-[20px] 2xs:text-base sm:text-[20px] font-normal font-heading leading-[23px];
+  }
+
   img {
     @apply w-full h-full object-cover;
   }
+
   .leading {
     @apply leading-[26px];
   }
+
   p {
-    @apply text-dark-gray leading-[26px] font-poppins;
+    @apply text-dark-gray leading-[26px] font-body;
+  }
+
+  a {
+    @apply font-bold;
   }
 }
 
 @layer components {
-  .container-sm1 {
-    @apply mx-5;
+  .btn-custom {
+    @apply bg-orange hover:bg-blue hover:text-white cursor-pointer text-center rounded-[23px] px-7 py-2.5 font-body font-bold leading-[26px] tracking-[0.003em] transition-all duration-500 ease-in-out;
   }
-  .container-sm2 {
-    @apply px-5;
-  }
-  .btn {
-    @apply bg-orange hover:bg-blue cursor-pointer text-center rounded-[23px] px-7 py-2.5 font-poppins font-bold leading-[26px] text-dark-gray tracking-[0.003em] transition-all duration-500 ease-in-out;
-  }
-  .container-1000 {
-    @apply max-w-[1000px] 2xs:mx-5 lg:mx-0;
+  .btn-card {
+    @apply w-fit justify-self-center mt-2.5;
   }
 }
 
 @layer utilities {
-  .links,
+  .container-sm {
+    @apply mx-5;
+  }
+
+  .container-max-1000 {
+    @apply max-w-[1000px] 2xs:mx-5 lg:mx-0;
+  }
+
+  nav .links,
   #mobileMenu a {
-    @apply text-dark-gray font-bold leading-[26px];
+    @apply leading-[26px] text-dark-gray;
   }
+
   .links a {
-    @apply hover:text-orange transition-all duration-400 ease-in-out;
+    @apply hover:text-orange text-dark-gray transition-all duration-400 ease-in-out;
   }
+
   nav button svg {
     @apply w-8 h-8 text-blue cursor-pointer;
   }
+
   nav img {
     @apply 2xs:max-w-[150px] lg:max-w-[263px] cursor-pointer;
   }
-  .nav-main {
-    @apply items-center justify-between rounded-lg bg-white w-[-webkit-fill-available] 
-    py-5 pl-[34px] pr-[45px] 2xs:pl-5 2xs:pr-5 sm:pl-6 sm:pr-6 lg-pro:pl-[34px] lg-pro:pr-[45px];
+
+  header .nav-main {
+    @apply items-center justify-between rounded-lg bg-white w-[-webkit-fill-available] py-5 pl-[34px] pr-[45px] 2xs:pl-5 2xs:pr-5 sm:pl-6 sm:pr-6 lg-pro:pl-[34px] lg-pro:pr-[45px];
   }
-  .hero-heading {
+
+  .hero-section .hero-heading {
     @apply 2xs:left-[50px] md:left-20 lg:left-[100px];
   }
+
   .blue-green-bg,
   .announcement-bar:first-child {
     @apply bg-blue-green;
   }
-  .about-beachside-rehab-main {
+
+  .about-beachside-rehab .about-beachside-rehab-main {
     @apply 2xs:gap-[30px] xl:gap-[100px] -mt-[300px] mx-20 2xs:mx-3.5 lg:mx-20 bg-blue-green rounded-tl-[40px] rounded-bl-[140px] rounded-tr-[140px] rounded-br-[40px];
   }
+
+  .our-facilities .facility-card {
+    @apply bg-bottom bg-cover rounded-lg;
+  }
+
+  .our-facilities .facility-card .card {
+    @apply pt-[394px] px-2.5 pb-2.5 w-[-webkit-fill-available];
+  }
+
+  .card .card-text {
+    @apply p-7 text-center rounded-lg;
+  }
+
+  .our-team-card{
+    @apply bg-cover bg-center relative min-h-[500px];
+  }
+  
 }
 
 .active_nav {
@@ -111,15 +147,31 @@
   transition: 0.3s ease;
   top: 0;
 }
+
 .transition {
   transition: all;
   transition-duration: 500;
   transition-timing-function: ease-in-out;
 }
-.header-shedow {
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-shadow {
   box-shadow: 0px 4px 20px 0px #00000033;
   backdrop-filter: blur(10px);
 }
+
 .hero-gradiant {
   background: linear-gradient(
     281.12deg,
@@ -129,13 +181,20 @@
     rgba(0, 0, 0, 0.75) 95.86%
   );
 }
+
 .about-beachside-rehab-main-gradiant {
   box-shadow: 0px 4px 20px 0px #00000033;
 }
-.our-facilities-blur{
-  background: #FFFFFFE0;
-  backdrop-filter: blur(10px);
+
+.our-facilities-blur {
+  background: #ffffffe0;
 }
-.our-facilities-shadow{
+
+.our-facilities-shadow {
   box-shadow: 0px 4px 20px 0px #00000033;
+}
+
+.our-team-member-gradiant {
+  background: linear-gradient(0deg, #f8d4b4, #f8d4b4),
+    linear-gradient(0deg, rgba(248, 212, 180, 0) 76.06%, #f8d4b4 100%);
 }
