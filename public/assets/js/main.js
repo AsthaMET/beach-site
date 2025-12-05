@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//welcome-to-our-facility slider
 document.addEventListener("DOMContentLoaded", () => {
   var swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 2500,
       disableOnInteraction: false,
     },
-    centeredSlides: true,
+    centeredSlides: false,
     loopedSlides: 5,
     slidesPerView: 1.1,
     spaceBetween: 20,
@@ -78,5 +79,44 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 30,
       },
     },
+  });
+});
+
+// our-team-member slider
+document.addEventListener("DOMContentLoaded", () => {
+  var swiper = new Swiper(".team-member-Swiper", {
+    loop: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    breakpoints: {
+      640: {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+      },
+    },
+  });
+});
+
+//
+document.addEventListener("DOMContentLoaded", () => {
+  var swiper = new Swiper(".testonomial", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
   });
 });

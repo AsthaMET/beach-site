@@ -45,14 +45,19 @@
     @apply text-[48px] 2xs:text-[26px] sm:text-[30px] md:text-[35px] lg:text-[48px] font-heading font-normal text-dark-blue 2xs:text-center lg:text-left leading-[55px] 2xs:leading-10 md:leading-[55px];
   }
 
+  h3,
+  .h3 {
+    @apply text-[32px] 2xs:text-[20px] sm:text-[26px] md:text-[30px] lg:text-[32px] font-heading font-normal;
+  }
+
   h4,
   .h4 {
-    @apply 2xs:text-[18px] sm:text-[20px] md:text-[24px] leading-[34px] font-body font-bold;
+    @apply 2xs:text-[18px] sm:text-[20px] md:text-[24px] leading-[34px]! font-body font-bold;
   }
 
   h5,
   .h5 {
-    @apply text-[20px] 2xs:text-base sm:text-[20px] font-normal font-heading leading-[23px];
+    @apply text-[20px] 2xs:text-base sm:text-[20px] font-normal font-body leading-[23px];
   }
 
   img {
@@ -74,7 +79,7 @@
 
 @layer components {
   .btn-custom {
-    @apply bg-orange hover:bg-blue hover:text-white cursor-pointer text-center rounded-[23px] px-7 py-2.5 font-body font-bold leading-[26px] tracking-[0.003em] transition-all duration-500 ease-in-out;
+    @apply bg-orange text-dark-gray hover:bg-blue hover:text-white cursor-pointer text-center rounded-[23px] px-7 py-2.5 font-body font-bold leading-[26px] tracking-[0.003em] transition-all duration-500 ease-in-out;
   }
   .btn-card {
     @apply w-fit justify-self-center mt-2.5;
@@ -121,25 +126,56 @@
   }
 
   .about-beachside-rehab .about-beachside-rehab-main {
-    @apply 2xs:gap-[30px] xl:gap-[100px] -mt-[300px] mx-20 2xs:mx-3.5 lg:mx-20 bg-blue-green rounded-tl-[40px] rounded-bl-[140px] rounded-tr-[140px] rounded-br-[40px];
+    @apply 2xs:gap-[30px] xl:gap-[100px] -mt-[300px] mx-20 2xs:mx-5 lg:mx-20 bg-blue-green rounded-tl-[40px] rounded-bl-[140px] rounded-tr-[140px] rounded-br-[40px];
   }
 
   .our-facilities .facility-card {
-    @apply bg-bottom bg-cover rounded-lg;
+    @apply bg-bottom bg-cover rounded-lg relative;
   }
 
   .our-facilities .facility-card .card {
-    @apply pt-[394px] px-2.5 pb-2.5 w-[-webkit-fill-available];
+    @apply pt-[394px] px-2.5 pb-2.5 w-[-webkit-fill-available] cursor-pointer;
   }
 
   .card .card-text {
     @apply p-7 text-center rounded-lg;
   }
 
-  .our-team-card{
-    @apply bg-cover bg-center relative min-h-[500px];
+  .our-team-card {
+    @apply bg-cover bg-center relative min-h-[500px] rounded-lg;
   }
-  
+
+  .card-text .btn-custom a {
+    @apply after:absolute after:inset-0 after:h-full after:w-full;
+  }
+
+  .card-contannt {
+    @apply absolute bottom-0 justify-self-center p-2.5 w-full;
+  }
+
+  .card-contannt .inner-contant {
+    @apply text-center rounded-lg p-3.5;
+  }
+
+  .inner-contant h5 {
+    @apply mt-1;
+  }
+
+  .inner-contant h4 {
+    @apply text-dark-blue;
+  }
+
+  .faq-main {
+    @apply w-full 2xs:px-5 sm:px-10 md:px-20 lg:px-28 xl:px-64 2xs:py-[50px] md:py-14 lg:py-16 xl:py-[100px];
+  }
+
+  .faqs select {
+    @apply w-full;
+  }
+
+  .faqs div {
+    @apply bg-blue text-white py-5 px-7 rounded-lg text-[23px] 2xs:text-[20px]! md:text-[23px]! font-bold font-body;
+  }
 }
 
 .active_nav {
@@ -165,6 +201,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.pagination-dots .swiper-pagination{
+  position: static;
+  transform: none;
 }
 
 .header-shadow {
