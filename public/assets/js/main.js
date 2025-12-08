@@ -59,13 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //welcome-to-our-facility slider
 document.addEventListener("DOMContentLoaded", () => {
-  var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".our-facility-swiper", {
     loop: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
     },
-    centeredSlides: false,
+    centeredSlides: true,
     loopedSlides: 5,
     slidesPerView: 1.1,
     spaceBetween: 20,
